@@ -1,0 +1,5 @@
+const fs = require("fs");
+fs.writeFile("message.txt", "hello node", (err) => {
+  if (err) throw err;
+  console.log("the file has been saved");
+});
