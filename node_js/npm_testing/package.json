@@ -4,12 +4,13 @@
   "description": "I'm learning about NPM",
   "license": "ISC",
   "author": "stavros maz",
-  "type": "commonjs",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "sillyname": "^0.1.0"
+    "sillyname": "^0.1.0",
+    "superheroes": "^4.0.0"
   }
 }
