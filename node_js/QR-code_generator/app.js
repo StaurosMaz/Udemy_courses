@@ -1,10 +1,8 @@
 import inquirer from "inquirer";
 inquirer
-  .prompt([
-    /* Pass your questions in here */
-  ])
+  .prompt([{ message: "type in your URL", name: "URL" }])
   .then((answers) => {
-    // Use user feedback for... whatever!!
+    console.log(answers);
   })
   .catch((error) => {
     if (error.isTtyError) {
