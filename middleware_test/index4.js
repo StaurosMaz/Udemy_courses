@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 app.post("/submit", (req, res) => {
-  res.send(`your band mane is${name}`);
+  res.send(`your band mane is ${name}`);
 });
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
