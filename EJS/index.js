@@ -2,9 +2,17 @@ import express from "express";
 const app = express();
 const port = 3000;
 app.get("/", (req, res) => {
+  const d = new Date();
+  const day = d.getDay();
+  let type = "a weekday";
+  let adv = "its time to work hard";
+  if (d === 0 || d === 6) {
+    type = "the weekend";
+    adv = "is here";
+  }
   res.render("index.ejs", {
-    dayType: "a weekday",
-    advice: "its time to work hard",
+    dayType: type,
+    advice: adv,
   });
 });
 app.listen(port, () => {
