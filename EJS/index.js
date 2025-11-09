@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
   const day = d.getDay();
   let type = "a weekday";
   let adv = "its time to work hard";
-  if (d === 0 || d === 6) {
+  if (day === 0 || day === 6) {
     type = "the weekend";
     adv = "is here";
   }
