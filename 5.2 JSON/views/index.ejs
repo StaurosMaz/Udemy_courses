@@ -22,8 +22,11 @@
       <h3>Ingredients:</h3>
       <ul id="ingredientsList">
       <li><%=recipe.ingredients.protein.name%>, <%=recipe.ingredients.protein.preparation%></li>
-      <li>Salsa name</li>
-      <li>Every other topping</li>
+      <li><%= recipe.ingredients.salsa.name %></li>
+      <% recipe.ingredients.toppings.forEach(topping=> {%>
+      
+      <li><%=topping.quantity%> of <%=topping.name%></li>
+       <%}); %>
     </ul>
      
      <% } else{%>
