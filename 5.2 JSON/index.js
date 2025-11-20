@@ -15,17 +15,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.render("index.ejs",{recipe:data});
 });
-const data=[]
+let data;
 app.post("/recipe", (req, res) => {
   //Step 3: Write your code here to make this behave like the solution website.
   switch (req.body.choice){
-    case "":
+    case "chicken":
       data =JSON.parse(recipeJSON)[0];
+      console.log(data);
+      
       break;
-    case "":
+    case "beef":
       data =JSON.parse(recipeJSON)[1];
       break;
-    case "":
+    case "fish":
       data =JSON.parse(recipeJSON)[2];
       break;
     default:

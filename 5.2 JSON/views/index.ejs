@@ -18,18 +18,20 @@
 
     <!-- If no recipe yet, show: -->
      <% if (locals.recipe) { %>
-      <h2>Pick your favourite taco ingredient 👆</h2>
-     <% } else{%>
-      <%=recipe %>
-    <% } %>
-    <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
-
-    <h3>Ingredients:</h3>
-    <ul id="ingredientsList">
-      <li>Protein name, protein preparation</li>
+      <h2 id="recipeTitle"><%=recipe.name%></h2>
+      <h3>Ingredients:</h3>
+      <ul id="ingredientsList">
+      <li><%=recipe.ingredients.protein.name%>, <%=recipe.ingredients.protein.preparation%></li>
       <li>Salsa name</li>
       <li>Every other topping</li>
     </ul>
+     
+     <% } else{%>
+      <h2>Pick your favourite taco ingredient 👆</h2>
+    <% } %>
+    <!-- Else, show the recipe name e.g. <h2>Recipe name</h2>-->
+
+    
 
 
 
