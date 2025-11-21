@@ -34,9 +34,12 @@
       <button type="submit" class="form-submit">Go</button>
     </form>
     <section id="cards" class="cards">
+      <% if (data.activity) { %>
+      
+      
       <article class="card-item">
         <h2 class="card-activity">
-          <!-- Show Activity -->
+          <%=data.activity%>
         </h2>
         <div class="card-info">
           <span class="card-type">
@@ -48,11 +51,13 @@
           </span>
         </div>
       </article>
-
-
-      <div id="tag-error" class="tag-error">
-        <!-- Show any errors that were sent from the backend -->
-      </div>
+      <% } %>
+<!-- Show any errors that were sent from the backend -->
+      <%if (locals.error) {%>
+            <div id="tag-error" class="tag-error">
+              <%=error%>
+            </div>
+            <%}%>
 
     </section>
   </div>
