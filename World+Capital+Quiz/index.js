@@ -15,11 +15,18 @@ db.connect();
 const app = express();
 const port = 3000;
 
-let quiz = [
-  { country: "France", capital: "Paris" },
-  { country: "United Kingdom", capital: "London" },
-  { country: "United States of America", capital: "New York" },
-];
+db.query("SELECT * FROM capitals", (err, res) => {
+  if (err) {
+    console.error("Error executing query", err.stack);
+  } else {
+    quiz = res.rows;
+  }
+  db.end();
+});
+
+
+
+
 
 let totalCorrect = 0;
 
