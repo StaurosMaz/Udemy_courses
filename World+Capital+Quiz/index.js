@@ -14,7 +14,7 @@ db.connect();
 
 const app = express();
 const port = 3000;
-
+let quiz = [];
 db.query("SELECT * FROM capitals", (err, res) => {
   if (err) {
     console.error("Error executing query", err.stack);
