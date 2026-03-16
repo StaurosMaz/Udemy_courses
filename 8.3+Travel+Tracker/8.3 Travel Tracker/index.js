@@ -24,6 +24,14 @@ let countries = [];
 result.rows.forEach((country) => {
   countries.push(country.country_code);
 });
+
+app.post("/add", async (req, res) => {
+    const input = req.body["country"];
+    const result = await db.query("SELECT country-code FROM countries WHERE  country_name = $1",[input]);
+    
+});
+
+
 res.render("index.ejs", { countries: countries, total: countries.length });
 db.end();
 });
