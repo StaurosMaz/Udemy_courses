@@ -6,7 +6,20 @@
 //E.g.
 //Created by Angela Yu.
 //Copyright 2019.
+import React from "react";
+import ReactDOM from "react-dom/client";
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const name = "stavros";
+const year = 2026;
+
+root.render(
+  <>
+    <p>Created by {name}</p>
+    <p>Copyright {year}</p>
+  </>,
+);
 // If you're running this locally in VS Code use the commands:
 // npm install
 // to install the node modules and
