@@ -8,8 +8,8 @@ const port = 3000;
 const db = new pg.Client({
   user: "postgres",
   host: "localhost",
-  database: "world",
-  password: "123456",
+  database: "test",
+  password: "12345",
   port: 5432,
 });
 db.connect();
@@ -38,7 +38,7 @@ app.post("/add", async (req, res) => {
   try {
     const result = await db.query(
       "SELECT country_code FROM countries WHERE LOWER(country_name) LIKE '%' || $1 || '%';",
-      [input.toLowerCase()]
+      [input.toLowerCase()],
     );
 
     const data = result.rows[0];
@@ -46,7 +46,7 @@ app.post("/add", async (req, res) => {
     try {
       await db.query(
         "INSERT INTO visited_countries (country_code) VALUES ($1)",
-        [countryCode]
+        [countryCode],
       );
       res.redirect("/");
     } catch (err) {

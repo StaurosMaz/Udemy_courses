@@ -5,6 +5,17 @@
 //Apply the "heading" style in the styles.css
 //Dynamically change the color of the h1 using inline css styles.
 //Morning = red, Afternoon = green, Night = blue.
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const date = new Date();
+console.log(date);
+const time = date.getHours();
+console.log(time);
+
+root.render();
 
 // If you're running this locally in VS Code use the commands:
 // npm install
