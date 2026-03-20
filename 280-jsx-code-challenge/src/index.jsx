@@ -7,7 +7,7 @@ import ReactDOM from "react-dom/client";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <h1>Hello i eat</h1>
+    <h1 className="heading">Hello i eat</h1>
     <ul>
       <li>egg</li>
       <li>rice</li>
