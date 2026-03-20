@@ -12,7 +12,10 @@ import ReactDOM from "react-dom/client";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const name = "stavros";
-const year = 2026;
+
+const currentDate = new Date();
+const year = currentDate.getFullYear();
+console.log(year);
 
 root.render(
   <>
