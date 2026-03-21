@@ -11,11 +11,28 @@ import ReactDOM from "react-dom/client";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const date = new Date();
-console.log(date);
-const time = date.getHours();
-console.log(time);
 
-root.render();
+const time = date.getHours();
+let h1Text;
+const greetingStyle = {
+  color: "",
+};
+if (time.toString() >= "00" && time.toString() <= "12") {
+  h1Text = "good moring";
+  greetingStyle.color = "red";
+} else if (time.toString() <= "12" && time.toString() >= "18") {
+  h1Text = "good good Afternoon";
+  greetingStyle.color = "green";
+} else {
+  h1Text = "good evening";
+  greetingStyle.color = "blue";
+}
+
+root.render(
+  <h1 className="heading" style={greetingStyle}>
+    {h1Text}
+  </h1>,
+);
 
 // If you're running this locally in VS Code use the commands:
 // npm install
