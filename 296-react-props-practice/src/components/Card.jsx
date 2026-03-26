@@ -1,5 +1,6 @@
 import React from "react";
 import Avatar from "./Avatar";
+import Info from "./Info";
 
 export default function Card(props) {
   return (
@@ -10,8 +11,7 @@ export default function Card(props) {
           <Avatar img={props.img} />
         </div>
         <div className="bottom ">
-          <p className="info">{props.tel}</p>
-          <p className="info">{props.email}</p>
+          <Info tel={props.tel} email={props.email} />
         </div>
       </div>
     </div>
