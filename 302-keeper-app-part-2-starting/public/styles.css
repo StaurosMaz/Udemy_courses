@@ -54,3 +54,6 @@ footer p {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
+body {
+  font-family: "Montserrat", sans-serif;
+}
